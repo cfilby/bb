@@ -1,3 +1,3 @@
-defmodule BbTest do
+defmodule BBTest do
   use ExUnit.Case
 end

@@ -1,4 +1,4 @@
-defmodule Bb.Slack do
+defmodule BB.Slack do
   use Slack
 
   def handle_connect(slack, state) do

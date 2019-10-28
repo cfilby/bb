@@ -1,4 +1,4 @@
-defmodule Bb.MixProject do
+defmodule BB.MixProject do
   use Mix.Project
 
   def project do
@@ -15,7 +15,7 @@ defmodule Bb.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      mod: {Bb.Application, []}
+      mod: {BB.Application, []}
     ]
   end
 

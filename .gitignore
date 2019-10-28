@@ -24,3 +24,4 @@ bb-*.tar
 
 .elixir_ls/
 
+.env
