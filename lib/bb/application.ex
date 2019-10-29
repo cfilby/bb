@@ -6,13 +6,10 @@ defmodule BB.Application do
   use Application
 
   def start(_type, _args) do
-    import Supervisor.Spec, warn: false
-
     children = [
       # Starts a worker by calling: Bb.Worker.start_link(arg)
       # {Bb.Worker, arg}
-      # How does this work exactly?
-      worker(Slack.Bot, [BB.Slack, [], Application.get_env(:slack, :api_token)])
+      Plug.Cowboy.child_spec(scheme: :http, plug: BB.Router, options: [port: Application.get_env(:bb, :http_port)])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
